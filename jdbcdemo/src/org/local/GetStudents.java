@@ -17,17 +17,17 @@ public class GetStudents {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_demo", 
 					"root", "Sarpata@6");
 			st = conn.createStatement();
-			res = st.executeQuery("SELECT * FROM Student");
-//			ress = st.executeQuery("SELECT * FROM Student");
-			System.out.println("ID    Name    Age");
-			while(res.next()) {
-				System.out.println(res.getInt("id")+"    "+res.getString("Name")+"    "+res.getInt("Age"));
-			}
-			System.out.println();
+//			res = st.executeQuery("SELECT * FROM Student");
+			ress = st.executeQuery("SELECT * FROM Student");
 //			System.out.println("ID    Name    Age");
-//			while(ress.next()) {
-//				System.out.println(ress.getInt(1)+"    "+ress.getString(2)+"    "+ress.getInt(3));
+//			while(res.next()) {
+//				System.out.println(res.getInt("id")+"    "+res.getString("Name")+"    "+res.getInt("Age"));
 //			}
+			System.out.println();
+			System.out.println("ID    Name    Age");
+			while(ress.next()) {
+				System.out.println(ress.getInt(1)+"    "+ress.getString(2)+"    "+ress.getInt(3));
+			}
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		} finally {

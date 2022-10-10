@@ -15,7 +15,7 @@ public class DynamicDemo1 {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_demo", 
 					"root", "Sarpata@6");
 			pst=conn.prepareStatement(qry);
-			pst.setInt(1, 10);
+			pst.setInt(1, 11);
 			pst.setString(2, "Hari");
 			pst.setInt(3, 22);
 			pst.execute();
